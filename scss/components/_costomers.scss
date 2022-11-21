@@ -16,22 +16,16 @@ margin-bottom: 50px;
 .costomers-list {
   display: flex;
   gap: 30px;
-  flex-wrap: wrap;
+
 
 }
 
 .costomers-item {
-  // width: calc((100% - 150px) / 6);
+  width: calc((100% - 150px) / 6);
   height: 92px;
-  @include formula(2, 30px);
-@media screen and (min-width: 768px) {
-    @include formula(3, 30px);
-  }
-  @media screen and (min-width: 1200px) {
-    @include formula(6, 30px);
-  }
-  }
 
+
+}
 .costomers-link {
   width: 100%;
   height: 100%;

@@ -999,13 +999,11 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .input-check:checked + .form-check-text span {
   background-color: var(--active-color);
   border-color: transparent;
   fill: #ffffff;
 }
-
 .input-check:focus + .form-check-text span {
   border-color: var(--active-color);
 }

@@ -1,16 +1,8 @@
 .container {
-  width: 100%;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
   /* outline: 2px solid red; */
-  @include media(480px){
-  max-width: 480px;}
-    @include media(768px) {
-    max-width: 768px;
-  }
-  @include media(1200px) {
-    max-width: 1200px;
-  }
 
 }
