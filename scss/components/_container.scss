@@ -5,12 +5,12 @@
   margin: 0 auto;
   /* outline: 2px solid red; */
     @include media(480px){
-  max-width: 480px;}
+  width: 480px;}
     @include media(768px) {
-    max-width: 768px;
+    width: 768px;
   }
   @include media(1200px) {
-    max-width: 1200px;
+  width: 1200px;
   }
   
 
