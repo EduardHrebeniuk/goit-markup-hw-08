@@ -1,23 +1,41 @@
 .footer {
-  background: var(--footer-background-color);
+  background-color: var(--footer-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .footer-container{
   display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  gap: 60px;
+@media screen and (min-width: 480px) {
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1200px) {
   align-items: baseline;
   justify-content: space-between;
+  gap: 0;
 }
+
+  }
 .footer-wrap{
+
 
 }
 .footer-logo {
+
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
+  font-size: 24px;
+line-height: calc(28 / 24);
+  @media screen and (min-width: 1200px) {
   font-size: 26px;
   line-height: 1.19;
+}
   letter-spacing: 0.03em;
   color: var(--background-color);
   display: block;
@@ -70,8 +88,16 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 
 .footer-soc{
-      margin-right: 93px;
-    margin-left: 70px;
+
+@media screen and (min-width: 480px) {
+}
+@media screen and (min-width: 768px) {
+  margin-left: 165px;
+}
+@media screen and (min-width: 1200px) {
+  margin-right: 93px;
+  margin-left: 70px;
+}
 
 }
 
@@ -92,6 +118,7 @@ margin-bottom: 20px;
   align-items: center;
   justify-content: center;
   gap: 10px;
+
 }
 
 .footer-soc-item {
@@ -135,16 +162,34 @@ color: var(--background-color);
 }
 .footer-form-wrap{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 12px;
+  @media screen and (min-width: 480px) {
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1200px) {
+  flex-wrap: nowrap;
+  justify-content:flex-start;
+}
 
 }
 
 .footer-form-imput {
-  width: 358px;
+
+  width: 100%;
   height: 50px;
   padding: 0 16px;
+  @media screen and (min-width: 480px) {
+}
+@media screen and (min-width: 768px) {
 
+}
+@media screen and (min-width: 1200px) {
+  width: 358px;
+}
   background-color: inherit;
   color: var(--background-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
