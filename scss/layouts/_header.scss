@@ -14,35 +14,69 @@ align-items: center;
 
 }
 .logo{
-  padding-top: 24px ;
-padding-bottom: 25px;
-font-family: "Raleway", sans-serif;
+padding-top: 16px ;
+padding-bottom: 16px;
 font-weight: 700;
-font-size: 26px;
-line-height: 1.19;
+font-size: 24px;
+line-height: calc(28 / 24);
 letter-spacing: 0.03em;
 color: var(--logo-color);
-}
-.navigation__logo {
-margin-right: 93px;
+font-family: "Raleway", sans-serif;
+@include media(480px){
 
 }
+@include media(768px){
+padding-top: 26px ;
+padding-bottom: 26px;
+}
+@include media(1200px){
+    padding-top: 24px ;
+padding-bottom: 25px;
+font-size: 26px;
+line-height: 1.19;
+}
+}
+.navigation__logo {
+  @include media(768px){
+    margin-right: 88px;
+  }
+  @include media(1200px){
+    margin-right: 93px;
+  }
+}
+
 .logo__web {
 color: var(--active-color);
+
 }
 
 .menu{
-  display: flex;
-  gap: 50px;
 
+  display: none;
+
+  @include media(768px){
+    display: flex;
+    gap: 50px;
+  }
+@include media(1200px){
+  display: flex; 
+  gap: 50px;
+}
 }
 
 
 .menu__link {
   position: relative;
 font-weight: 500;
+
+  @include media(768px){
+    font-size: 12px;
+line-height: calc(14 / 12);
+  }
+@include media(1200px){
 font-size: 14px;
 line-height: 1.14;
+}
 letter-spacing: 0.02em;
 color:  var(--title-text-color);
 padding-top: 32px;
@@ -80,13 +114,28 @@ border-radius: 2px;
 
 
 .contact  {
-  display: flex; 
 
+display: none;
+@include media(768px){
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 10px;
+}
+@include media(1200px){
+  display: flex; 
+}
 
 }
 .header__contact{
-    gap: 50px;
+    @include media(768px){
+      margin-left: 90px;
+
+    }
+  @include media(1200px){    
+    gap: 30px;
   margin-left: auto;
+}
+
 }
 .contact__item {
 
@@ -101,8 +150,11 @@ line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--text-color);
 display: block;
+
+@include media(1200px){
   padding-top: 32px;
 padding-bottom: 32px;
+}
 display:flex;
 align-items: center;
 transition-property: color ;
@@ -111,6 +163,7 @@ transition-timing-function:  cubic-bezier(0.4, 0, 0.2, 1);
 &:hover, &:focus {
   color: var(--active-color);
 }
+
 }
 
 
@@ -134,4 +187,120 @@ transition-timing-function:  cubic-bezier(0.4, 0, 0.2, 1);
 
 .header__icon{
   margin-right: 10px;
+}
+.menu-open-mob{
+  border: 0px;
+  background-color: var(--background-color);
+margin-left: auto;
+  @include media(768px){
+display: none;
+  }
+}
+
+
+
+
+
+.mob__menu {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+
+}
+.mob-container{
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:40px 48px;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
+
+
+
+
+}
+.menu-close-mob {
+position: absolute;
+top: 10px;
+right: 15px;
+  border: 0;
+  background-color: var(--background-color);
+  transition-property: fill ;
+transition-duration: 250ms ;
+transition-timing-function:  cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover, &:focus{
+    fill: var(--active-color);
+  }
+}
+
+.mob__menu-list{
+
+}
+.mob__menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mob__menu__link {
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: calc(47 / 40);
+letter-spacing: 0.02em;
+color:  var(--title-text-color);
+
+}
+
+.mob__menu .mob__menu__link.current{
+  color:var(--active-color);
+}
+.mob__menu-wrap{
+  
+}
+.mob__menu-contact {
+  margin-bottom: 64px;
+}
+.mob__menu-contact__item {
+  &:not(:last-child){
+    margin-bottom: 32px;
+  }
+  
+}
+.mob__menu-contact__email {
+font-weight: 500;
+font-size: 24px;
+line-height: calc(28 / 24);
+letter-spacing: 0.02em;
+color: var(--text-color);
+}
+.mob__menu-contact__tel {
+font-weight: 500;
+  font-size: 34px;
+line-height: calc(40 / 34) 40px;
+letter-spacing: 0.02em;
+  color: var(--active-color);
+}
+.mob__soc-list {
+  display: flex;
+
+}
+.mob__soc-item{
+
+  padding-right: 10px;
+  &:not(:first-child){
+    padding-left: 10px;
+  }
+  &:not(:last-child){
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+}
+.mob__soc-link{
+  font-weight: 500;
+font-size: 18px;
+line-height: calc(22 / 18);
+letter-spacing: 0.02em;
+color:  var(--active-color);
 }

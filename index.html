@@ -21,7 +21,7 @@
 
   <body>
     <!-- header -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <nav class="navigation">
           <a class="logo navigation__logo link" href="./index.html"
@@ -40,6 +40,7 @@
           </ul>
         </nav>
 
+  
         <ul class="contact header__contact list">
           <li class="contact__item">
             <a class="contact__email link" href="info@devstudio.com"
@@ -57,8 +58,58 @@
             </a>
           </li>
         </ul>
+        <button type="button" class="menu-open-mob" data-menu-open><svg width="40" height="40">
+  <use href="./images/icons.svg#icon-menu-mob"">
+  </use>
+  </svg></button>
       </div>
-    </header> -->
+
+
+        <div class="mob__menu is-hidden" data-menu>
+          <div class="mob-container">
+          <button type="button" class="menu-close-mob" data-menu-close>
+            <svg width="40" height="40">
+              <use href="./images/icons.svg#icon-btn-mob-close"">
+              </use>
+            </svg>
+          </button>
+          <ul class="mob__menu-list list">
+              <li class="mob__menu__item">
+                <a class="mob__menu__link current link" href="./index.html">Студія</a>
+              </li>
+              <li class="mob__menu__item">
+                <a class="mob__menu__link link" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="mob__menu__item">
+                <a class="mob__menu__link link" href="">Контакти</a>
+              </li>
+          </ul>
+<div class="mob__menu-wrap">
+            <ul class="mob__menu-contact list">
+              <li class="mob__menu-contact__item">
+                <a class="mob__menu-contact__tel link" href="tel:+380961111111"
+                  >+38 096 111 11 11</a>
+              </li>
+              <li class="mob__menu-contact__item">
+                <a class="mob__menu-contact__email link" href="info@devstudio.com"
+                  >info@devstudio.com</a>
+              </li>
+              
+            </ul>
+            <ul class="mob__soc-list list">
+              <li class="mob__soc-item ">
+                <a rel="noreferrer noopener nofollow" href="#" class="mob__soc-link link">Instagram</a></li>
+              <li class="mob__soc-item ">
+                <a rel="noreferrer noopener nofollow" href="#" class="mob__soc-link link">Twitter</a></li>
+              <li class="mob__soc-item ">
+                <a  rel="noreferrer noopener nofollow" href="#" class="mob__soc-link link">Facebook</a></li>
+              <li class="mob__soc-item ">
+                <a rel="noreferrer noopener nofollow" href="#" class="mob__soc-link link">LinkedIn</a></li>
+            </ul>
+</div>
+        </div>
+</div>
+    </header>
     <!--  Main content -->
     <main class="main content">
       <!-- "Герой" -->
@@ -181,7 +232,7 @@
               <source srcset="./images/team1-tab.jpg 1x, ./images/team1-tab-2x.jpg 2x " media="(min-width:756px)">
               <source srcset="./images/team1-mob.jpg 1x, ./images/team1-mob-2x.jpg 2x" media="(min-width:320px)" >
               <img
-                src="./images/team1.jpg"
+                src="./images/team1-mob.jpg"
                 alt=" Фото продукт дизайнера Ігора Дем'яненка "
                 width="450"
               />
@@ -229,7 +280,7 @@
               <source srcset="./images/team2-tab.jpg 1x, ./images/team2-tab-2x.jpg 2x " media="(min-width:756px)">
               <source srcset="./images/team2-mob.jpg 1x, ./images/team2-mob-2x.jpg 2x" media="(min-width:320px)" >
               <img
-                src="./images/team2.jpg"
+                src="./images/team2-mob.jpg"
                 alt="Фото розробника Ольги Рєпіної "
                 width="450"
               />
@@ -276,7 +327,7 @@
               <source srcset="./images/team3-tab.jpg 1x, ./images/team3-tab-2x.jpg 2x " media="(min-width:756px)">
               <source srcset="./images/team3-mob.jpg 1x, ./images/team3-mob-2x.jpg 2x" media="(min-width:320px)" >
               <img
-                src="./images/team3.jpg"
+                src="./images/team3-mob.jpg"
                 alt="Фото маркутолога Миколи Тарасова "
                 width="450"
               />
@@ -323,7 +374,7 @@
               <source srcset="./images/team4-tab.jpg 1x, ./images/team4-tab-2x.jpg 2x " media="(min-width:756px)">
               <source srcset="./images/team4-mob.jpg 1x, ./images/team4-mob-2x.jpg 2x" media="(min-width:320px)" >
                <img
-                src="./images/team4.jpg"
+                src="./images/team4-mob.jpg"
                 alt="Фото дизайнера Михайла Єрмакова "
                 width="450"
               />
@@ -527,7 +578,7 @@
       </div>
     </footer>
     <!-- Modal -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-exit-btg" data-modal-close>
           <svg class="modal-svg" height="11" width="11">
@@ -609,7 +660,8 @@
           <div class="form-button"><button class="modal-form-button" type="submit">Відправити</button></div>
         </form>
       </div>
-    </div> -->
+    </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

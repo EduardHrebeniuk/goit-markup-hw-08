@@ -9,3 +9,8 @@ list-style: none;
 .link {
 text-decoration: none;
 }
+.is-hidden{
+  visibility:hidden;
+  opacity: 0;
+  pointer-events: none;
+}
